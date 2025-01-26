@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import cine from '../assets/1.png';
 import coll from '../assets/gandr-collage2.jpg';
 
-const url = "http://localhost:8000/auth"
+const url = `${import.meta.env.VITE_URL}/auth`
 
 const Register = ({setAuth}) => {
     const navigate = useNavigate();

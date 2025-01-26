@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { MovieCard } from "./MovieCard";
 import { Link } from "react-router-dom";
-const url = "http://localhost:8000/auth/";
+const url = `${import.meta.env.VITE_URL}/auth/`;
 
 const Dashboard = ({ setAuth, JWT }) => {
   const [name, setName] = useState({});
@@ -40,7 +40,7 @@ const Dashboard = ({ setAuth, JWT }) => {
       } else {
         console.log(movieName);
         axios
-          .get("http://127.0.0.1:8000/api/search/" + movieName)
+          .get(`${import.meta.env.VITE_URL}/api/search/` + movieName)
           .then((res) => {
             console.log(res.data);
             setSearchResult(res.data);

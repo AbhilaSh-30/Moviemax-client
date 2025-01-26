@@ -8,9 +8,9 @@ import coll from '../assets/gandr-collage.jpg';
 
 
 
-const url = "http://127.0.0.1:8000/auth"
-
 const Login = ({ setAuth }) => {
+    const url = `${import.meta.env.VITE_URL}/auth`;
+    console.log(url);
     const navigate = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
